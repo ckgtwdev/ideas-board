@@ -20,8 +20,12 @@ When moving from the local HTML file to GitHub Pages, export a backup from the l
 
 ## Publish with GitHub Pages
 
-Commit the app files to a GitHub repository, then enable Pages in the repository's **Settings > Pages** and choose the branch and folder containing the app files.
+To publish a simple static HTML/CSS/JavaScript site, use the repository's `main` branch:
 
-GitHub Pages looks for `index.html` at the published folder's root, and this project uses `index.html`. If your project uses a differently named HTML file, rename it to `index.html` for the default site URL, or keep its name and open it directly at `/<filename>.html` (URL-encode spaces, such as `/Start%20Board.html`).
+1. Make sure `index.html` is in the repository's root directory.
+2. Open the repository's **Settings → Pages**.
+3. Under **Build and deployment**, choose **Deploy from a branch**.
+4. Select **`main`** and **`/(root)`**, then select **Save**.
+5. Find the published URL in the Pages section. For a repository named `ideas-board`, it will look like `https://yourgithubname.github.io/ideas-board/`.
 
 GitHub Pages serves static files only. Each visitor's board is stored in that visitor's browser; Pages does not provide shared storage or automatic syncing.
