@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Start Board</title>
+<link rel="stylesheet" href="start-board.css">
+</head><body>
+<header class="wrap">
+<h1>✨ Start Board</h1>
+<p class="sub">Three ideas live in Now. Everything else waits its turn.</p>
+<div class="data-actions">
+<button type="button" data-a="export">Export backup</button>
+<button type="button" data-a="import">Import backup</button>
+<input id="import-file" type="file" accept="application/json,.json" hidden>
+</div>
+</header>
+<main class="wrap">
+<section aria-labelledby="now-heading">
+<h2 id="now-heading">Now · pick up and go</h2>
+<div id="now" class="grid"></div>
+</section>
+<section aria-labelledby="filters-heading">
+<h2 id="filters-heading">What can I do today?</h2>
+<div id="chips" class="chips"></div>
+</section>
+<section aria-labelledby="someday-heading">
+<h2 id="someday-heading">Someday · idea trug</h2>
+<div id="some" class="grid"></div>
+</section>
+<section aria-labelledby="archived-heading">
+<h2 id="archived-heading">Archived</h2>
+<div id="archived" class="grid"></div>
+</section>
+</main>
+<button class="p fab" id="add">＋ New idea</button>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<dialog id="dlg" aria-labelledby="dt"><form id="idea-form">
+<b style="font-size:20px" id="dt">New idea</b>
+<label for="f_ic">Icon (an emoji)</label><input id="f_ic" maxlength="4">
+<label for="f_ti">Idea</label><input id="f_ti">
+<fieldset class="tag-field"><legend>Needs (tap to choose)</legend><div id="f_tags" class="chips"></div></fieldset>
+<label for="f_goal">Goal · one sentence</label><input id="f_goal">
+<label for="f_kit">Kit list · one item per line</label><textarea id="f_kit"></textarea>
+<label for="f_setup">Setup · where and when</label><input id="f_setup">
+<label for="f_clean">Cleanup</label><input id="f_clean">
+<label for="f_first">First tiny step · under 10 minutes</label><input id="f_first">
+<div class="acts"><button class="p" id="save" type="submit">Save</button><button id="cancel" type="button">Cancel</button></div>
+</form></dialog>
+<script src="start-board.js" defer></script>
+</body></html>
