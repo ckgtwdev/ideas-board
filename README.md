@@ -4,13 +4,15 @@ A small, browser-based board for collecting ideas, choosing a few to work on now
 
 ## Run locally
 
-Open `index.html` in a browser. The app uses `start-board.css` for styling and `start-board.js` for its behavior. It does not require a server or build step.
+Open `index.html` in a browser. The app uses `start-board.css` for styling and `start-board.js` for its behavior. It does not require a server or build step. Start saving ideas right away.
 
 ## Your ideas and backups
 
 Ideas are saved in the browser's local storage under the key `startboard`. They are not written into the project files. The example ideas in `SEED` in `start-board.js` are only used when that browser has no saved board.
 
 The board is local to the browser profile and site origin. It does not automatically sync between browsers or devices. Clearing browser data can remove it.
+
+**To reduce the risk of losing ideas, export backups regularly and keep them somewhere safe.**
 
 - Select **Export backup** to download a dated JSON backup of the current board.
 - Select **Import backup** to restore a backup. Importing replaces the current board after confirmation.
@@ -29,3 +31,7 @@ To publish a simple static HTML/CSS/JavaScript site, use the repository's `main`
 5. Find the published URL in the Pages section. For a repository named `ideas-board`, it will look like `https://yourgithubname.github.io/ideas-board/`.
 
 GitHub Pages serves static files only. Each visitor's board is stored in that visitor's browser; Pages does not provide shared storage or automatic syncing.
+
+## Demo
+
+[Open the demo](https://ckgtwdev.github.io/ideas-board/)
